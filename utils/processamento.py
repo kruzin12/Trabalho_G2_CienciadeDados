@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import json
 
+@st.cache_data
 def carrega_chegadas():
     df = pd.read_csv('./trabalho_G2/data/chegadas_2024.csv', encoding='latin-1', sep=';')
     df.columns = df.columns.str.strip()
