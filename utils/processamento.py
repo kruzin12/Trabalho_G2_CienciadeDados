@@ -4,7 +4,7 @@ import json
 
 @st.cache_data
 def carrega_chegadas():
-    df = pd.read_csv('./trabalho_G2/data/chegadas_2024.csv', encoding='latin-1', sep=';')
+    df = pd.read_csv('./Trabalho_G2_CienciadeDados/data/chegadas_2024.csv', encoding='latin-1', sep=';')
     df.columns = df.columns.str.strip()
     #Remover codigo da via
     df = df.drop(columns=['cod via'])
