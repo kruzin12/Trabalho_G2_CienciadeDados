@@ -5,7 +5,7 @@ import seaborn as sns
 
 df = carrega_chegadas()
 sns.set_style("whitegrid")
-@st.cache_data
+
 st.title("Resumo Geral")
 
 st.header('Top 10 Estados com mais Chegadas de Turistas em 2024')
