@@ -34,7 +34,7 @@ st.pyplot(fig1)
 
 st.header('Chegadas por Continente')
 
-continente_data = df.groupby('continente')['chegadas'].sum().sort_values(ascending=True).reset_index()
+continente_data = df.groupby('continente')['chegadas'].sum().sort_values(ascending=False).reset_index()
 
 fig2, ax2 = plt.subplots()
 sns.barplot(
