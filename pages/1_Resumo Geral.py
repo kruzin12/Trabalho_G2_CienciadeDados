@@ -11,7 +11,7 @@ st.title("Resumo Geral")
 st.header('Top 10 Estados com mais Chegadas de Turistas em 2024')
 
 total = df['chegadas'].sum()
-uf_top = df.groupby('uf')['chegadas'].sum().sort_values(ascending=False).head(10)
+uf_top = df.groupby('uf')['chegadas'].sum().sort_values(ascending=True).head(10)
 
 fig1, ax1 = plt.subplots()
 sns.barplot(
@@ -34,7 +34,7 @@ st.pyplot(fig1)
 
 st.header('Chegadas por Continente')
 
-continente_data = df.groupby('continente')['chegadas'].sum().sort_values(ascending=False).reset_index()
+continente_data = df.groupby('continente')['chegadas'].sum().sort_values(ascending=True).reset_index()
 
 fig2, ax2 = plt.subplots()
 sns.barplot(
